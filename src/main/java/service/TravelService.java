@@ -24,4 +24,8 @@ public class TravelService {
     public List<Travel> getTravelByDate(Integer origin, Integer destination, Date date) {
         return abstractTravelDAO.getTravelByDate(origin, destination, date);
     }
+
+    public City getCityByID(Integer id) {
+        return abstractTravelDAO.getCityByID(id);
+    }
 }
