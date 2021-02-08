@@ -29,6 +29,7 @@ public class BuyTravelController extends AbstractController {
         String date = httpServletRequest.getParameter("date");
         List<Travel> travels = travelService.getTravelByDate(origin, destination, parseDate(date));
         ModelAndView modelAndView = new ModelAndView("buy");
+        modelAndView.addObject("date", date);
         modelAndView.addObject("travels", travels);
         return modelAndView;
     }
