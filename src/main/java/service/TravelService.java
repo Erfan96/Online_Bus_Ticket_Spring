@@ -5,6 +5,7 @@ import dao.CityMapper;
 import entity.City;
 import entity.Travel;
 
+import java.sql.Date;
 import java.util.List;
 
 public class TravelService {
@@ -20,7 +21,7 @@ public class TravelService {
         return abstractTravelDAO.getAllCities();
     }
 
-    public List<Travel> getTravelByDate() {
-        return null;
+    public List<Travel> getTravelByDate(Integer origin, Integer destination, Date date) {
+        return abstractTravelDAO.getTravelByDate(origin, destination, date);
     }
 }
