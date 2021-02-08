@@ -9,5 +9,6 @@ import java.util.List;
 public interface AbstractTravelDAO {
 
     List<City> getAllCities();
+    City getCityByID(Integer id);
     List<Travel> getTravelByDate(Integer origin, Integer destination, Date date);
 }
