@@ -11,6 +11,6 @@
     <title>Title</title>
 </head>
 <body>
-<a href="${pageContext.request.contextPath}/search">go to buy ticket</a>
+<a href="search">go to buy ticket</a>
 </body>
 </html>
