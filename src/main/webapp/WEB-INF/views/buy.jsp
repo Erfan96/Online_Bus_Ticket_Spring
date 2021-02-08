@@ -2,36 +2,38 @@
   Created by IntelliJ IDEA.
   User: efsam
   Date: 2/8/2021
-  Time: 6:04 PM
+  Time: 7:43 PM
   To change this template use File | Settings | File Templates.
 --%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Buy</title>
+    <title>Title</title>
 </head>
 <body>
-<table border="1">
-    <tr>
-        <td colspan="2"><lable>Direction : ${origin.name}-${destination.name}</lable></td>
-        <td><lable>Departure date :<br><c:out value="${date}" /></lable></td>
-    </tr>
-
-    <tr>
-        <th>Departure time</th>
-        <th>Travel id</th>
-        <th>Select</th>
-    </tr>
-    <c:forEach var="travel" items="${travels}">
+<form action="success" method="post">
+    <table id="type">
         <tr>
-            <td align="center"><c:out value="${travel.departureTime}" /></td>
-            <td align="center"><c:out value="${travel.travelId}" /></td>
-            <form action="">
-                <td align="center" ><input name="${travel.travelId}" type="submit" value="buy"></td>
-            </form>
+            <th>Name :</th>
+            <td><input id="txt" type="text" placeholder="Enter passenger name" name="passengerName" required></td>
         </tr>
-    </c:forEach>
-</table>
+        <tr>
+            <th>Gender :</th>
+            <td align="center">
+                <input type="radio" id="male" name="gender" value="MALE" required>
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="FEMALE">
+                <label for="female">Female</label>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" colspan="2">
+
+                <input id="sub" type="submit" name="save" value="submit">
+
+            </td>
+        </tr>
+    </table>
+</form>
 </body>
 </html>
