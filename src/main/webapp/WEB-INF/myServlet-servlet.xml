@@ -9,6 +9,10 @@
         <constructor-arg index="0" ref="travelService"/>
     </bean>
 
+    <bean name="/buy" class="controller.BuyTravelController">
+        <constructor-arg index="0" ref="travelService"/>
+    </bean>
+
     <bean name="travelService" class="service.TravelService">
         <constructor-arg index="0" ref="travelDAO"/>
     </bean>
