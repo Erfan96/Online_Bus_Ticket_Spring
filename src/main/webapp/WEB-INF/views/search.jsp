@@ -14,7 +14,7 @@
 </head>
 <body>
 
-    <form action="buy" method="get">
+    <form action="show" method="get">
 
         <label id="org"> Origin </label>
         <label id="des"> Destination </label>
