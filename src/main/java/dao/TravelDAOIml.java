@@ -17,6 +17,7 @@ public class TravelDAOIml implements AbstractTravelDAO {
     private final String SQL_FIND_ALL_CITIES = "select * from city";
     private final String SQL_FIND_TRAVEL_BY_DATE =
             "select * from travel where origin=? and destination=? and departure_date=?";
+    private final String SQL_FIND_CITY_BY_ID = "select * from city where id=?";
 
     public TravelDAOIml(DataSource dataSource) {
         this.jdbcTemplate = new JdbcTemplate(dataSource);
@@ -32,5 +33,8 @@ public class TravelDAOIml implements AbstractTravelDAO {
         return this.jdbcTemplate.query(SQL_FIND_TRAVEL_BY_DATE, new Object[]{origin, destination, date}, new TravelMapper());
     }
 
-
+    @Override
+    public City getCityByID(Integer id) {
+        return this.jdbcTemplate.queryForObject(SQL_FIND_CITY_BY_ID, new Object[]{id}, new CityMapper());
+    }
 }
