@@ -29,7 +29,7 @@ public class TravelDAOIml implements AbstractTravelDAO {
 
     @Override
     public List<Travel> getTravelByDate(Integer origin, Integer destination, Date date) {
-        return this.jdbcTemplate.query(SQL_FIND_TRAVEL_BY_DATE,new Object[]{origin, destination, date}, new TravelMapper());
+        return this.jdbcTemplate.query(SQL_FIND_TRAVEL_BY_DATE, new Object[]{origin, destination, date}, new TravelMapper());
     }
 
 
