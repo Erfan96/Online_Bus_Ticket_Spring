@@ -9,6 +9,7 @@ import service.TravelService;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.sql.Date;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -31,11 +32,13 @@ public class ShowTravelController extends AbstractController {
         List<Travel> travels = travelService.getTravelByDate(origin, destination, parseDate(date));
         City originName = travelService.getCityByID(origin);
         City destinationName = travelService.getCityByID(destination);
-        ModelAndView modelAndView = new ModelAndView("buy");
+        ModelAndView modelAndView = new ModelAndView("travel");
         modelAndView.addObject("date", date);
         modelAndView.addObject("travels", travels);
         modelAndView.addObject("origin", originName);
         modelAndView.addObject("destination", destinationName);
+        HttpSession session = httpServletRequest.getSession();
+        session.setAttribute("travels", travels);
         return modelAndView;
     }
 
