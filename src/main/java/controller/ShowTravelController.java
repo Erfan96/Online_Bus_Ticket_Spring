@@ -14,12 +14,12 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.List;
 
-public class BuyTravelController extends AbstractController {
+public class ShowTravelController extends AbstractController {
 
     private static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("yyyy/MM/dd");
     private TravelService travelService;
 
-    public BuyTravelController(TravelService travelService) {
+    public ShowTravelController(TravelService travelService) {
         this.travelService = travelService;
     }
 
