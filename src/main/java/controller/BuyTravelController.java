@@ -1,6 +1,7 @@
 package controller;
 
 
+import entity.City;
 import entity.Travel;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.AbstractController;
@@ -28,9 +29,13 @@ public class BuyTravelController extends AbstractController {
         Integer destination = Integer.valueOf(httpServletRequest.getParameter("destination"));
         String date = httpServletRequest.getParameter("date");
         List<Travel> travels = travelService.getTravelByDate(origin, destination, parseDate(date));
+        City originName = travelService.getCityByID(origin);
+        City destinationName = travelService.getCityByID(destination);
         ModelAndView modelAndView = new ModelAndView("buy");
         modelAndView.addObject("date", date);
         modelAndView.addObject("travels", travels);
+        modelAndView.addObject("origin", originName);
+        modelAndView.addObject("destination", destinationName);
         return modelAndView;
     }
 
