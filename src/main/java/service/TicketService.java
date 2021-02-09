@@ -11,7 +11,11 @@ public class TicketService {
         this.abstractTicketDAO = abstractTicketDAO;
     }
 
-    public boolean buyTicket(Ticket ticket) {
-        return this.abstractTicketDAO.buyTicket(ticket);
+    public boolean addTicket(Ticket ticket) {
+        return this.abstractTicketDAO.addTicket(ticket);
+    }
+
+    public boolean deleteTicketByTicketId(String ticketID) {
+        return this.abstractTicketDAO.deleteTicketByTicketId(ticketID);
     }
 }
