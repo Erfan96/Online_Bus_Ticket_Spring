@@ -16,4 +16,8 @@ public class DetailTicketService {
     public List<DetailTicket> getListOfTicketsByUserID(Integer id) {
         return this.abstractDetailTicketDAO.getListOfTicketsByUserID(id);
     }
+
+    public DetailTicket getDetailTicketByTicketId(String ticketId) {
+        return this.abstractDetailTicketDAO.getDetailTicketByTicketId(ticketId);
+    }
 }
