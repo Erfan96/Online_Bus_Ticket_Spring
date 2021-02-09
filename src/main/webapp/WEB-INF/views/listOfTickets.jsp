@@ -26,7 +26,7 @@
     </tr>
     <c:forEach var="ticket" items="${ticketList}">
         <tr>
-            <td align="center"><a href="showTicket?value=${ticket.ticketId}">Show ticket</a></td>
+            <td align="center"><a href="detail?value=${ticket.ticketId}">Show ticket</a></td>
             <td align="center"><c:out value="${ticket.ticketId}" /></td>
             <td align="center"><c:out value="${ticket.departureDate}" /></td>
         </tr>
