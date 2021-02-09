@@ -11,11 +11,11 @@ import javax.servlet.http.HttpSession;
 import java.util.List;
 
 
-public class BuyTravelController extends AbstractController {
+public class BuyTicketController extends AbstractController {
 
     private TravelService travelService;
 
-    public BuyTravelController(TravelService travelService) {
+    public BuyTicketController(TravelService travelService) {
         this.travelService = travelService;
     }
 
