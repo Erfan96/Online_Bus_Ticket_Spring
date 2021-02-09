@@ -1,5 +1,4 @@
-<%@ page import="entity.City" %>
-<%@ page import="java.util.List" %><%--
+<%--
   Created by IntelliJ IDEA.
   User: efsam
   Date: 2/8/2021
@@ -11,34 +10,36 @@
 <html>
 <head>
     <title>Search</title>
-</head>
-<body>
 
+</head>
+<body id="back">
+<div class="container">
     <form action="show" method="get">
 
         <label id="org"> Origin </label>
         <label id="des"> Destination </label>
         <label id="dat"> Date</label><br>
 
-        <select name="origin">
+        <select id="ori" name="origin">
             <option value="0">Select your origin...</option>
             <c:forEach items="${cities}" var="city">
                 <option value="${city.id}">${city.name}</option>
             </c:forEach>
         </select>
 
-        <select name="destination">
+        <select id="desti" name="destination">
             <option value="0">Select your destination...</option>
             <c:forEach items="${cities}" var="city">
                 <option value="${city.id}">${city.name}</option>
             </c:forEach>
         </select>
 
-        <input name="date" type="text" placeholder="2021/**/**">
+        <input id="date" name="date" type="text" placeholder="2021/**/**">
 
-        <input type="submit" value="search">
+        <input id="sear" type="submit" value="search">
 
     </form>
+</div>
 
     <p id="title">List of your tickets:</p>
     <form action="tickets">
