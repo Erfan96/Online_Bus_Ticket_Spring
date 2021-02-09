@@ -10,7 +10,7 @@
 <html>
 <head>
     <title>successfully</title>
-    <link rel="stylesheet" type="text/css" href="successful.css" />
+
 </head>
 <body id="back">
 <div id="text">
@@ -24,7 +24,7 @@
     </p>
 </div>
 <p id="title">List of your tickets:</p>
-<form action="ticket">
+<form action="tickets">
     <input class="show" type="submit" name="show" value="show">
 </form>
 </body>
