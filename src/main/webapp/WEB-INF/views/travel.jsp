@@ -10,9 +10,11 @@
 <html>
 <head>
     <title>Buy</title>
+
 </head>
 <body>
-<table border="1">
+<div align="center">
+<table id="ticket" border="1">
     <tr>
         <td colspan="2"><lable>Direction : ${origin.name}-${destination.name}</lable></td>
         <td><lable>Departure date :<br><c:out value="${date}" /></lable></td>
@@ -28,10 +30,11 @@
             <td align="center"><c:out value="${travel.departureTime}" /></td>
             <td align="center"><c:out value="${travel.travelId}" /></td>
             <form action="buy">
-                <td align="center" ><input name="${travel.travelId}" type="submit" value="buy"></td>
+                <td align="center" ><input id="but" name="${travel.travelId}" type="submit" value="buy"></td>
             </form>
         </tr>
     </c:forEach>
 </table>
+</div>
 </body>
 </html>
