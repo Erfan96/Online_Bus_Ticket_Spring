@@ -25,6 +25,10 @@
         <constructor-arg index="0" ref="detailTicketService"/>
     </bean>
 
+    <bean name="/detail" class="controller.DetailPerTicketController">
+        <constructor-arg index="0" ref="detailTicketService"/>
+    </bean>
+
     <bean name="detailTicketService" class="service.DetailTicketService">
         <constructor-arg index="0" ref="detailTicketDAO"/>
     </bean>
