@@ -10,7 +10,7 @@
 <html>
 <head>
     <title>List of tickets</title>
-    <link rel="stylesheet" type="text/css" href="ticket.css" />
+
 </head>
 <body>
 <table id="table">
