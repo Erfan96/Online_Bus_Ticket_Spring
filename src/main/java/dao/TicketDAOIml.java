@@ -12,6 +12,7 @@ public class TicketDAOIml implements AbstractTicketDAO {
     private final String SQL_BUY_TICKET = "insert into ticket " +
             "(gender, passenger_name, ticket_id, travel_id, client_user_id) values(?, ?, ?, ?, ?)";
 
+
     public TicketDAOIml(DataSource dataSource) {
         this.jdbcTemplate = new JdbcTemplate(dataSource);
     }
