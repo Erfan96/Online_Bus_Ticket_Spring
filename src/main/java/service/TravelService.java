@@ -1,7 +1,6 @@
 package service;
 
 import dao.AbstractTravelDAO;
-import dao.CityMapper;
 import entity.City;
 import entity.Travel;
 
@@ -18,14 +17,14 @@ public class TravelService {
 
 
     public List<City> getAllCities() {
-        return abstractTravelDAO.getAllCities();
+        return this.abstractTravelDAO.getAllCities();
     }
 
     public List<Travel> getTravelByDate(Integer origin, Integer destination, Date date) {
-        return abstractTravelDAO.getTravelByDate(origin, destination, date);
+        return this.abstractTravelDAO.getTravelByDate(origin, destination, date);
     }
 
     public City getCityByID(Integer id) {
-        return abstractTravelDAO.getCityByID(id);
+        return this.abstractTravelDAO.getCityByID(id);
     }
 }
