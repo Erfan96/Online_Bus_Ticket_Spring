@@ -11,24 +11,9 @@ public class DetailTicket {
     private Date departureDate;
     private String departureTime;
     private String travelId;
-    private Integer origin;
-    private Integer destination;
+    private String origin;
+    private String destination;
 
-    public Integer getOrigin() {
-        return origin;
-    }
-
-    public void setOrigin(Integer origin) {
-        this.origin = origin;
-    }
-
-    public Integer getDestination() {
-        return destination;
-    }
-
-    public void setDestination(Integer destination) {
-        this.destination = destination;
-    }
 
     public String getPassengerName() {
         return passengerName;
@@ -84,5 +69,21 @@ public class DetailTicket {
 
     public void setTravelId(String travelId) {
         this.travelId = travelId;
+    }
+
+    public String getOrigin() {
+        return origin;
+    }
+
+    public void setOrigin(String origin) {
+        this.origin = origin;
+    }
+
+    public String getDestination() {
+        return destination;
+    }
+
+    public void setDestination(String destination) {
+        this.destination = destination;
     }
 }
