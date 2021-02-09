@@ -17,6 +17,18 @@
         <constructor-arg index="0" ref="travelService"/>
     </bean>
 
+    <bean name="/success" class="controller.SuccessController">
+        <constructor-arg index="0" ref="ticketService"/>
+    </bean>
+
+    <bean name="ticketService" class="service.TicketService">
+        <constructor-arg index="0" ref="ticketDAO"/>
+    </bean>
+
+    <bean name="ticketDAO" class="dao.TicketDAOIml">
+        <constructor-arg index="0" ref="dataSource"/>
+    </bean>
+
     <bean name="travelService" class="service.TravelService">
         <constructor-arg index="0" ref="travelDAO"/>
     </bean>
