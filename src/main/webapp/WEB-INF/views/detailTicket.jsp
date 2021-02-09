@@ -10,7 +10,7 @@
 <html>
 <head>
     <title>Detail ticket</title>
-    <link rel="stylesheet" type="text/css" href="detailTicket.css" />
+
 </head>
 <body>
 
@@ -53,7 +53,7 @@
             <td><c:out value="${detail.travelId}" /></td>
         </tr>
         <tr>
-            <th colspan="4"><a href="cancel?value=${detail.ticketId}">Cancel ticket</a></th>
+            <th colspan="4"><a href="delete?value=${detail.ticketId}">Cancel ticket</a></th>
         </tr>
 
 </table>
