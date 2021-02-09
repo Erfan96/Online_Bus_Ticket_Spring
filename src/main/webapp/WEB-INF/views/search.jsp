@@ -40,5 +40,10 @@
 
     </form>
 
+    <p id="title">List of your tickets:</p>
+    <form action="tickets">
+        <input id="butt" type="submit" name="show" value="show">
+    </form>
+
 </body>
 </html>
