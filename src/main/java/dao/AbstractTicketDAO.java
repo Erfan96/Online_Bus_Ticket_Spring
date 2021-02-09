@@ -3,5 +3,6 @@ package dao;
 import entity.Ticket;
 
 public interface AbstractTicketDAO {
-    boolean buyTicket(Ticket ticket);
+    boolean addTicket(Ticket ticket);
+    boolean deleteTicketByTicketId(String ticketID);
 }
