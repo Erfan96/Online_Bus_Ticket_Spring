@@ -38,7 +38,7 @@ public class SuccessController extends AbstractController {
         ticket.setTicketId(ticketId);
         ticket.setUser_id(1);
 
-        if (ticketService.buyTicket(ticket)) {
+        if (ticketService.addTicket(ticket)) {
 
             String type = maleOrFemale(gender);
             httpServletRequest.setAttribute("type", type);
