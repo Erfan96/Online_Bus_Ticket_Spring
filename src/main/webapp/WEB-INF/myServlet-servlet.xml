@@ -33,6 +33,22 @@
         <constructor-arg index="0" ref="ticketService"/>
     </bean>
 
+    <bean name="/login" class="controller.LoginController">
+        <constructor-arg index="0" ref="loginService"/>
+    </bean>
+
+    <bean name="/welcome" class="controller.WelcomeController">
+        <constructor-arg index="0" ref="loginService"/>
+    </bean>
+
+    <bean name="loginService" class="service.LoginService">
+        <constructor-arg index="0" ref="userDAO"/>
+    </bean>
+
+    <bean name="userDAO" class="dao.UserDAOIml">
+        <constructor-arg index="0" ref="dataSource"/>
+    </bean>
+
     <bean name="detailTicketService" class="service.DetailTicketService">
         <constructor-arg index="0" ref="detailTicketDAO"/>
     </bean>
