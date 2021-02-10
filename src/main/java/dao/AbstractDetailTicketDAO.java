@@ -1,7 +1,6 @@
 package dao;
 
 import entity.DetailTicket;
-import entity.User;
 
 import java.util.List;
 
