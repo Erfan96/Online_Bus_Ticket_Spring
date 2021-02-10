@@ -2,6 +2,7 @@ package controller;
 
 import entity.Ticket;
 import entity.Travel;
+import entity.User;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.AbstractController;
 import service.TicketService;
@@ -28,7 +29,8 @@ public class SuccessController extends AbstractController {
         Travel travel = (Travel) session.getAttribute("chosen");
 
 
-//        User user = (User) session.getAttribute("use");
+        User user = (User) session.getAttribute("use");
+
 
         String ticketId = String.valueOf(UUID.randomUUID());
         Ticket ticket = new Ticket();
@@ -36,7 +38,7 @@ public class SuccessController extends AbstractController {
         ticket.setPassengerName(pName);
         ticket.setTravelId(travel.getId());
         ticket.setTicketId(ticketId);
-        ticket.setUser_id(1);
+        ticket.setUser_id(user.getId());
 
         if (ticketService.addTicket(ticket)) {
 
